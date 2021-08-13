@@ -385,11 +385,3 @@ if secim.upper() == "BOSS":
                 print("-> Toplamda {} kelimeyi boş bıraktınız.".format(PassPoint))
                 print(secim.upper() + " seviyesini %{} başarı oranı ile tamamladınız!".format(TruePoint*10))
                 break
-    
-
-    # passdan sonra doğru kelimeyi göster amk salagı    
-    # Soruyu atlamak için pass yazınız. 2 yanlış 1 doğruyu götürmektedir. :)
-    # aga şimdi doğru yanlıştan sonra "boş" yaptık da 2 doğru bir yanlışı götürsün yoksa boş bırakmanın ne anlamı olacak.
-    #yapılıyorsa arka plana chill müzik
-    #sitenin giriş ekranında en çok kullanınan ingilizce kelimeler çıksın. "ingilizce seviye testimi başlat." butonu sonrasında seviye seçtirt a1, a2, b1, b2, c1, c2, boss
-    #test bitiminde yanlış bilinen kelimelerin tamamı doğrusuyla birlikte gözükebilir.
