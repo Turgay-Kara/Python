@@ -4,8 +4,8 @@ import time
 
 bot = Bot()
 
-username = "hesabının adı"
-password = "password"
+username = "kullanıcı adı"
+password = "şifre"
 sevgilim = "göndermek istediğin kişi"
 
 bot.login(username=username, password=password)
