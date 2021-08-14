@@ -954,9 +954,3 @@ print(alan1 + alan2)
 
 #if 3 > 1:
     #pass    #-> Bu satırda Sonradan bir düzeltme yapacaksanız pass komutu işinize yarayacaktır.
-
-
-
-    #string(str)  -> Turgay      -> KELİMELER
-    #integer(int) -> 5           -> TAM SAYILAR
-    #float(float) -> 5.56        -> DOĞAL SAYILAR
