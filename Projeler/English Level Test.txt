@@ -1,0 +1,387 @@
+import random
+secim = input("A1 - A2 - B1 - B2 - C1 - C2 - BOSS\nLütfen bir seviye belirleyiniz: ")
+print(secim.upper() + " seviyesini seçtiniz.\n\n")
+if secim.lower() == "a1":
+    kelimeler_a1 = {
+        "age":"yaş",
+        "apple":"elma",
+        "because":"çünkü",
+        "cat":"kedi",
+        "coffee":"kahve",
+        "classroom":"sınıf",
+        "day":"gün",
+        "ear":"kulak",
+        "egg":"yumurta",
+        "money":"para",
+        }
+    liste = list(kelimeler_a1.keys())
+    TruePoint = 0
+    FalsePoint = 0
+    PassPoint = 0
+    while True:
+        guess_pr = random.choice(liste)
+        guess = input(guess_pr + " kelimesinin Türkçe karşılığını giriniz: ")
+        guess = guess.lower()
+        if(guess == kelimeler_a1.get(guess_pr)):
+            print("Tahmininiz Doğru! \n\n")
+            kelimeler_a1.pop(guess_pr)
+            liste.remove(guess_pr)
+            TruePoint += 1
+            if(len(liste) == 0):
+                print("\n-> Toplamda {} kelimeyi doğru bildiniz.".format(TruePoint))
+                print("-> Toplamda {} kelimeyi yanlış bildiniz.".format(FalsePoint))
+                print("-> Toplamda {} kelimeyi boş bıraktınız.".format(PassPoint))
+                print(secim.upper() + " seviyesini %{} başarı oranı ile tamamladınız!".format(TruePoint*10))
+                break
+        elif guess == "pass":
+            print("Bu soruyu atladınız.\n")
+            kelimeler_a1.pop(guess_pr)
+            liste.remove(guess_pr)
+            PassPoint += 1
+            if(len(liste) == 0):
+                print("\n-> Toplamda {} kelimeyi doğru bildiniz.".format(TruePoint))
+                print("-> Toplamda {} kelimeyi yanlış bildiniz.".format(FalsePoint))
+                print("-> Toplamda {} kelimeyi boş bıraktınız.".format(PassPoint))
+                print(secim.upper + " seviyesini %{} başarı oranı ile tamamladınız!".format(TruePoint*10))
+                break
+        elif(guess != kelimeler_a1.get(guess_pr)):
+            print("\tTahmininiz yanlış!\n-" + guess_pr + "- kelimesinin karşılığı -" + kelimeler_a1.get(guess_pr) + "- olacaktır.\n\n")
+            kelimeler_a1.pop(guess_pr)
+            liste.remove(guess_pr)
+            FalsePoint += 1
+            if len(liste) == 0:
+                print("\n-> Toplamda {} kelimeyi doğru bildiniz.".format(TruePoint))
+                print("-> Toplamda {} kelimeyi yanlış bildiniz.".format(FalsePoint))
+                print("-> Toplamda {} kelimeyi boş bıraktınız.".format(PassPoint))
+                print(secim.upper() + " seviyesini %{} başarı oranı ile tamamladınız!".format(TruePoint*10))
+                break
+            
+if secim.lower() == "a2":
+    kelimeler_a2 = {
+        "after":"sonra",
+        "brush":"fırçalamak",
+        "catch":"yakalamak",
+        "develop":"geliştirmek",
+        "drive":"sürmek",
+        "fall":"düşmek",
+        "fly":"uçmak",
+        "immediately":"hemen",
+        "later":"sonra",
+        "marry":"evlenmek",
+        }
+    liste = list(kelimeler_a2.keys())
+    TruePoint = 0
+    FalsePoint = 0
+    PassPoint = 0
+    while True:
+        guess_pr = random.choice(liste)
+        guess = input(guess_pr + " kelimesinin Türkçe karşılığını giriniz: ")
+        guess = guess.lower()
+        if(guess == kelimeler_a2.get(guess_pr)):
+            print("Tahmininiz Doğru! \n\n")
+            kelimeler_a2.pop(guess_pr)
+            liste.remove(guess_pr)
+            TruePoint += 1
+            if(len(liste) == 0):
+                print("\n-> Toplamda {} kelimeyi doğru bildiniz.".format(TruePoint))
+                print("-> Toplamda {} kelimeyi yanlış bildiniz.".format(FalsePoint))
+                print("-> Toplamda {} kelimeyi boş bıraktınız.".format(PassPoint))
+                print(secim.upper() + " seviyesini %{} başarı oranı ile tamamladınız!".format(TruePoint*10))
+                break
+        elif guess == "pass":
+            print("Bu soruyu atladınız.\n")
+            kelimeler_a2.pop(guess_pr)
+            liste.remove(guess_pr)
+            PassPoint += 1
+            if(len(liste) == 0):
+                print("\n-> Toplamda {} kelimeyi doğru bildiniz.".format(TruePoint))
+                print("-> Toplamda {} kelimeyi yanlış bildiniz.".format(FalsePoint))
+                print("-> Toplamda {} kelimeyi boş bıraktınız.".format(PassPoint))
+                print(secim.upper() + " seviyesini %{} başarı oranı ile tamamladınız!".format(TruePoint*10))
+                break
+        elif(guess != kelimeler_a2.get(guess_pr)):
+            print("\tTahmininiz yanlış!\n-" + guess_pr + "- kelimesinin karşılığı -" + kelimeler_a2.get(guess_pr) + "- olacaktır.\n\n")
+            kelimeler_a2.pop(guess_pr)
+            liste.remove(guess_pr)
+            FalsePoint += 1
+            if len(liste) == 0:
+                print("\n-> Toplamda {} kelimeyi doğru bildiniz.".format(TruePoint))
+                print("-> Toplamda {} kelimeyi yanlış bildiniz.".format(FalsePoint))
+                print("-> Toplamda {} kelimeyi boş bıraktınız.".format(PassPoint))
+                print(secim.upper() + " seviyesini %{} başarı oranı ile tamamladınız!".format(TruePoint*10)) 
+                break
+            
+if secim.lower() == "b1":
+    kelimeler_b1 = {
+        "breath":"nefes",
+        "communication":"iletişim",
+        "convinve":"ikna etmek",
+        "enemy":"düşman",
+        "examine":"muayene etmek",
+        "fascinating":"büyüleyici",
+        "fear":"korku",
+        "lie":"yalan",
+        "nation":"ulus",
+        "politics":"siyaset"
+        }
+    liste = list(kelimeler_b1.keys())
+    TruePoint = 0
+    FalsePoint = 0
+    PassPoint = 0
+    while True:
+        guess_pr = random.choice(liste)
+        guess = input(guess_pr + " kelimesinin Türkçe karşılığını giriniz: ")
+        guess = guess.lower()
+        if(guess == kelimeler_b1.get(guess_pr)):
+            print("Tahmininiz Doğru! \n\n")
+            kelimeler_b1.pop(guess_pr)
+            liste.remove(guess_pr)
+            TruePoint += 1
+            if(len(liste) == 0):
+                print("\n-> Toplamda {} kelimeyi doğru bildiniz.".format(TruePoint))
+                print("-> Toplamda {} kelimeyi yanlış bildiniz.".format(FalsePoint))
+                print("-> Toplamda {} kelimeyi boş bıraktınız.".format(PassPoint))
+                print(secim.upper() + " seviyesini %{} başarı oranı ile tamamladınız!".format(TruePoint*10))
+                break
+        elif guess == "pass":
+            print("Bu soruyu atladınız.\n")
+            kelimeler_b1.pop(guess_pr)
+            liste.remove(guess_pr)
+            PassPoint += 1
+            if(len(liste) == 0):
+                print("\n-> Toplamda {} kelimeyi doğru bildiniz.".format(TruePoint))
+                print("-> Toplamda {} kelimeyi yanlış bildiniz.".format(FalsePoint))
+                print("-> Toplamda {} kelimeyi boş bıraktınız.".format(PassPoint))
+                print(secim.upper() + " seviyesini %{} başarı oranı ile tamamladınız!".format(TruePoint*10))
+                break
+        elif(guess != kelimeler_b1.get(guess_pr)):
+            print("\tTahmininiz yanlış!\n-" + guess_pr + "- kelimesinin karşılığı -" + kelimeler_b1.get(guess_pr) + "- olacaktır.\n\n")
+            kelimeler_b1.pop(guess_pr)
+            liste.remove(guess_pr)
+            FalsePoint += 1
+            if len(liste) == 0:
+                print("\n-> Toplamda {} kelimeyi doğru bildiniz.".format(TruePoint))
+                print("-> Toplamda {} kelimeyi yanlış bildiniz.".format(FalsePoint))
+                print("-> Toplamda {} kelimeyi boş bıraktınız.".format(PassPoint))
+                print(secim.upper() + " seviyesini %{} başarı oranı ile tamamladınız!".format(TruePoint*10))
+                break
+            
+if secim.lower() == "b2":
+    kelimeler_b2 = {
+        "adjust":"ayarlamak",
+        "basically":"temelde",
+        "beg":"dilenmek",
+        "circumstance":"durum",
+        "embrace":"kucaklamak",
+        "exploration":"keşif",
+        "forbid":"yasaklamak",
+        "immigration":"göç",
+        "insist":"ısrar etmek",
+        "negotiation":"müzakere",
+        }
+    liste = list(kelimeler_b2.keys())
+    TruePoint = 0
+    FalsePoint = 0
+    PassPoint = 0
+    while True:
+        guess_pr = random.choice(liste)
+        guess = input(guess_pr + " kelimesinin Türkçe karşılığını giriniz: ")
+        guess = guess.lower()
+        if(guess == kelimeler_b2.get(guess_pr)):
+            print("Tahmininiz Doğru! \n\n")
+            kelimeler_b2.pop(guess_pr)
+            liste.remove(guess_pr)
+            TruePoint += 1
+            if(len(liste) == 0):
+                print("\n-> Toplamda {} kelimeyi doğru bildiniz.".format(TruePoint))
+                print("-> Toplamda {} kelimeyi yanlış bildiniz.".format(FalsePoint))
+                print("-> Toplamda {} kelimeyi boş bıraktınız.".format(PassPoint))
+                print(secim.upper() + " seviyesini %{} başarı oranı ile tamamladınız!".format(TruePoint*10))
+                break
+        elif guess == "pass":
+            print("Bu soruyu atladınız.\n")
+            kelimeler_b2.pop(guess_pr)
+            liste.remove(guess_pr)
+            PassPoint += 1
+            if(len(liste) == 0):
+                print("\n-> Toplamda {} kelimeyi doğru bildiniz.".format(TruePoint))
+                print("-> Toplamda {} kelimeyi yanlış bildiniz.".format(FalsePoint))
+                print("-> Toplamda {} kelimeyi boş bıraktınız.".format(PassPoint))
+                print(secim.upper() + " seviyesini %{} başarı oranı ile tamamladınız!".format(TruePoint*10))
+                break
+        elif(guess != kelimeler_b2.get(guess_pr)):
+            print("\tTahmininiz yanlış!\n-" + guess_pr + "- kelimesinin karşılığı -" + kelimeler_b2.get(guess_pr) + "- olacaktır.\n\n")
+            kelimeler_b2.pop(guess_pr)
+            liste.remove(guess_pr)
+            FalsePoint += 1
+            if len(liste) == 0:
+                print("\n-> Toplamda {} kelimeyi doğru bildiniz.".format(TruePoint))
+                print("-> Toplamda {} kelimeyi yanlış bildiniz.".format(FalsePoint))
+                print("-> Toplamda {} kelimeyi boş bıraktınız.".format(PassPoint))
+                print(secim.upper() + " seviyesini %{} başarı oranı ile tamamladınız!".format(TruePoint*10))
+                break
+            
+if secim.lower() == "c1":
+    kelimeler_c1 = {
+        "betray":"ihanet etmek",
+        "bureaucracy":"bürokrasi",
+        "war":"savaş",
+        "efficiency":"verimlilik",
+        "grace":"lütuf",
+        "humanity":"insanlık",
+        "intervene":"araya girmek",
+        "merchant":"tüccar",
+        "plea":"savunma",
+        "warrant":"garanti"
+        }
+    liste = list(kelimeler_c1.keys())
+    TruePoint = 0
+    FalsePoint = 0
+    PassPoint = 0
+    while True:
+        guess_pr = random.choice(liste)
+        guess = input(guess_pr + " kelimesinin Türkçe karşılığını giriniz: ")
+        guess = guess.lower()
+        if(guess == kelimeler_c1.get(guess_pr)):
+            print("Tahmininiz Doğru! \n\n")
+            kelimeler_c1.pop(guess_pr)
+            liste.remove(guess_pr)
+            TruePoint += 1
+            if(len(liste) == 0):
+                print("\n-> Toplamda {} kelimeyi doğru bildiniz.".format(TruePoint))
+                print("-> Toplamda {} kelimeyi yanlış bildiniz.".format(FalsePoint))
+                print("-> Toplamda {} kelimeyi boş bıraktınız.".format(PassPoint))
+                print(secim.upper() + " seviyesini %{} başarı oranı ile tamamladınız!".format(TruePoint*10))
+                break
+        elif guess == "pass":
+            print("Bu soruyu atladınız.\n")
+            kelimeler_c1.pop(guess_pr)
+            liste.remove(guess_pr)
+            PassPoint += 1
+            if(len(liste) == 0):
+                print("\n-> Toplamda {} kelimeyi doğru bildiniz.".format(TruePoint))
+                print("-> Toplamda {} kelimeyi yanlış bildiniz.".format(FalsePoint))
+                print("-> Toplamda {} kelimeyi boş bıraktınız.".format(PassPoint))
+                print(secim.upper() + " seviyesini %{} başarı oranı ile tamamladınız!".format(TruePoint*10))
+                break
+        elif(guess != kelimeler_c1.get(guess_pr)):
+            print("\tTahmininiz yanlış!\n-" + guess_pr + "- kelimesinin karşılığı -" + kelimeler_c1.get(guess_pr) + "- olacaktır.\n\n")
+            kelimeler_c1.pop(guess_pr)
+            liste.remove(guess_pr)
+            FalsePoint += 1
+            if len(liste) == 0:
+                print("\n-> Toplamda {} kelimeyi doğru bildiniz.".format(TruePoint))
+                print("-> Toplamda {} kelimeyi yanlış bildiniz.".format(FalsePoint))
+                print("-> Toplamda {} kelimeyi boş bıraktınız.".format(PassPoint))
+                print(secim.upper() + " seviyesini %{} başarı oranı ile tamamladınız!".format(TruePoint*10))
+                break
+            
+if secim.lower() == "c2":
+    kelimeler_c2 = {
+        "alert":"uyarmak",
+        "declaration":"beyanname",
+        "embody":"somutlaştırmak",
+        "hardware":"donanım",
+        "implementation":"uygulama",
+        "leak":"sızıntı",
+        "municipality":"belediye",
+        "occurrence":"olay",
+        "productivity":"verimlikik",
+        "smash":"parçalamak"
+        }
+    liste = list(kelimeler_c2.keys())
+    TruePoint = 0
+    FalsePoint = 0
+    PassPoint = 0
+    while True:
+        guess_pr = random.choice(liste)
+        guess = input(guess_pr + " kelimesinin Türkçe karşılığını giriniz: ")
+        guess = guess.lower()
+        if(guess == kelimeler_c2.get(guess_pr)):
+            print("Tahmininiz Doğru! \n\n")
+            kelimeler_c2.pop(guess_pr)
+            liste.remove(guess_pr)
+            TruePoint += 1
+            if(len(liste) == 0):
+                print("\n-> Toplamda {} kelimeyi doğru bildiniz.".format(TruePoint))
+                print("-> Toplamda {} kelimeyi yanlış bildiniz.".format(FalsePoint))
+                print("-> Toplamda {} kelimeyi boş bıraktınız.".format(PassPoint))
+                print(secim.upper() + " seviyesini %{} başarı oranı ile tamamladınız!".format(TruePoint*10))
+                break
+        elif guess == "pass":
+            print("Bu soruyu atladınız.\n")
+            kelimeler_c2.pop(guess_pr)
+            liste.remove(guess_pr)
+            PassPoint += 1
+            if(len(liste) == 0):
+                print("\n-> Toplamda {} kelimeyi doğru bildiniz.".format(TruePoint))
+                print("-> Toplamda {} kelimeyi yanlış bildiniz.".format(FalsePoint))
+                print("-> Toplamda {} kelimeyi boş bıraktınız.".format(PassPoint))
+                print(secim.upper() + " seviyesini %{} başarı oranı ile tamamladınız!".format(TruePoint*10))
+                break
+        elif(guess != kelimeler_c2.get(guess_pr)):
+            print("\tTahmininiz yanlış!\n-" + guess_pr + "- kelimesinin karşılığı -" + kelimeler_c2.get(guess_pr) + "- olacaktır.\n\n")
+            kelimeler_c2.pop(guess_pr)
+            liste.remove(guess_pr)
+            FalsePoint += 1
+            if len(liste) == 0:
+                print("\n-> Toplamda {} kelimeyi doğru bildiniz.".format(TruePoint))
+                print("-> Toplamda {} kelimeyi yanlış bildiniz.".format(FalsePoint))
+                print("-> Toplamda {} kelimeyi boş bıraktınız.".format(PassPoint))
+                print(secim.upper() + " seviyesini %{} başarı oranı ile tamamladınız!".format(TruePoint*10))
+                break
+
+if secim.upper() == "BOSS":
+    kelimeler_boss = {
+        "extraterrestrial":"dünya dışı",
+        "brewery":"bira fabrikası",
+        "unadulterated":"katkısız",
+        "handkerchief":"mendil",
+        "lieutenant":"teğmen",
+        "entrepreneurial":"girişimci",
+        "schedule":"program",
+        "prejudice":"ön yargı",
+        "psychiatrist":"psikiyatrist",
+        "analysis":"analiz"
+        }
+    liste = list(kelimeler_boss.keys())
+    TruePoint = 0
+    FalsePoint = 0
+    PassPoint = 0
+    while True:
+        guess_pr = random.choice(liste)
+        guess = input(guess_pr + " kelimesinin Türkçe karşılığını giriniz: ")
+        guess = guess.lower()
+        if(guess == kelimeler_boss.get(guess_pr)):
+            print("Tahmininiz Doğru! \n\n")
+            kelimeler_boss.pop(guess_pr)
+            liste.remove(guess_pr)
+            TruePoint += 1
+            if(len(liste) == 0):
+                print("\n-> Toplamda {} kelimeyi doğru bildiniz.".format(TruePoint))
+                print("-> Toplamda {} kelimeyi yanlış bildiniz.".format(FalsePoint))
+                print("-> Toplamda {} kelimeyi boş bıraktınız.".format(PassPoint))
+                print(secim.upper() + " seviyesini %{} başarı oranı ile tamamladınız!".format(TruePoint*10))
+                break
+        elif guess == "pass":
+            print("Bu soruyu atladınız.\n")
+            kelimeler_boss.pop(guess_pr)
+            liste.remove(guess_pr)
+            PassPoint += 1
+            if(len(liste) == 0):
+                print("\n-> Toplamda {} kelimeyi doğru bildiniz.".format(TruePoint))
+                print("-> Toplamda {} kelimeyi yanlış bildiniz.".format(FalsePoint))
+                print("-> Toplamda {} kelimeyi boş bıraktınız.".format(PassPoint))
+                print(secim.upper() + " seviyesini %{} başarı oranı ile tamamladınız!".format(TruePoint*10))
+                break  
+        elif(guess != kelimeler_boss.get(guess_pr)):
+            print("\tTahmininiz yanlış!\n-" + guess_pr + "- kelimesinin karşılığı -" + kelimeler_boss.get(guess_pr) + "- olacaktır.\n\n")
+            kelimeler_boss.pop(guess_pr)
+            liste.remove(guess_pr)
+            FalsePoint += 1
+            if len(liste) == 0:
+                print("\n-> Toplamda {} kelimeyi doğru bildiniz.".format(TruePoint))
+                print("-> Toplamda {} kelimeyi yanlış bildiniz.".format(FalsePoint))
+                print("-> Toplamda {} kelimeyi boş bıraktınız.".format(PassPoint))
+                print(secim.upper() + " seviyesini %{} başarı oranı ile tamamladınız!".format(TruePoint*10))
+                break

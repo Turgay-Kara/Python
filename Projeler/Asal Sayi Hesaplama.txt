@@ -1,0 +1,55 @@
+    # ASAL Hesaplayici
+
+"""
+deger = int(input("Asal olup olmadigini ogrenmek istediginiz Sayiyi giriniz: "))
+x=deger-1
+
+if deger < 2:
+    print("Sayiniz Asal bir sayi Degildir!")
+
+else:
+    while x>1:
+        if deger%x==0:
+            print("{} sayisi Asal bir sayi degildir!".format(deger))
+            print("{} sayisi, {} sayisina bolumu {} degerine esittir.".format(deger, x, deger/x))
+            break
+        else:
+            x-=1
+    else:
+        print("{} sayisi Asal bir sayidir!".format(deger))
+"""
+
+    # ASAL Hesaplayici2
+"""
+    deger = int(input("Asal olup olmadigini ogrenmek istediginiz Sayiyi giriniz: "))
+
+    if deger == 2:
+        print("{} sayisi Asal bir sayidir!".format(deger))
+
+    elif deger < 2:
+        print("{} sayisi Asal bir sayi Degildir!".format(deger))
+
+    else:
+        for bolen in range(2,deger):
+            if deger % bolen == 0:
+                print("{} sayisi Asal bir sayi Değildir.".format(deger))
+                break
+
+        else:
+            print("{} sayisi Asal bir Sayidir".format(deger))
+"""
+
+    # ASAL Hesaplayici3
+"""
+sayi = int(input("Bir sayı girin: "))
+
+if sayi < 2:
+    print(sayi, "asal bir sayı değildir.")
+elif sayi == 2:
+    print(sayi, "asal bir sayıdır.")
+else:
+    if all(sayi % i != 0 for i in range(2, sayi // 2 + 1)):
+        print(sayi, "asal bir sayıdır.")
+    else:
+        print(sayi, "asal bir sayı değildir.")
+"""

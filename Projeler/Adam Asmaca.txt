@@ -1,0 +1,70 @@
+import random
+import sys
+from time import sleep
+
+Kelime_Listesi = ["elma", "armut", "muz", "kivi", "kitap", "kalem", "defter", "silgi", "köpek", "kedi", "yılan", "kartal", "monitör", "klavye", "fare", "hoparlör"]
+TahminEdilen_Kelime = []
+Gizli_Kelime = random.choice(Kelime_Listesi)
+Kelime_Uzunluğu = len(Gizli_Kelime)
+Alfabe = "abcdefghijklmnopqrstuvwxyz"
+Harf_Deposu = []
+
+def kurallar():
+    for karakter in Gizli_Kelime:
+        TahminEdilen_Kelime.append("-")
+    print("Tahmin  etmemiz gereken kelimede ", Kelime_Uzunluğu, " Harf var.")
+    sleep(1)
+    print("10 tahmin hakkınız var. ")
+    print("10 seferde bilemezseniz oyunu kaybedersiniz!")
+    print(TahminEdilen_Kelime)
+
+def Kelime_TahminEtme():
+    while True:
+        Kelime_Tahmin = input("Tüm kelimeyi tahmin etmek ister  misiniz?\nYanlış tahmin ederseniz oyunu kaybedersiniz.\n")
+        if Kelime_Tahmin == "evet":
+            Kelime_TahminDeneme = input("Kelimeyi tahmin ediniz:\n")
+            if Kelime_TahminDeneme == Gizli_Kelime:
+                print("Tebrikler! Oyunu kazandınız.")
+                sys.exit()
+            else:
+                print("Yanlış kelimeyi tahmin ettiniz! Oyun bitti\n")
+                sleep(1)
+                print("Gizli Kelime: ", Gizli_Kelime)
+                sys.exit()
+        elif(Kelime_Tahmin) == "hayır":
+            print("Tamam, Oyuna devam edelim \n")
+            break
+        else:
+            print("Lütfen evet veya hayır diye bir cevap veriniz.\n")
+            continue
+
+def Harf_TahminEtme():
+    TahminSayısı = 0
+
+    while TahminSayısı < 10:
+        Kelime_TahminEtme()
+        Harf_Deneme = input("Bir harf deneyin.\n ")
+        if not Harf_Deneme in Alfabe:
+            print("Lütfen alfabeden bir karakter yazınız.\n ")
+        elif Harf_Deneme in Harf_Deposu:
+            print("Bu harfi zaten tahmin ettiniz.\n ")
+        else:
+            Harf_Deposu.append(Harf_Deneme) 
+
+        if Harf_Deneme in Gizli_Kelime:
+            print("Doğru Tahmin!")
+            for x in range(0, Kelime_Uzunluğu):
+                if Gizli_Kelime[x] == Harf_Deneme:
+                    TahminEdilen_Kelime[x] = Harf_Deneme
+                    print(TahminEdilen_Kelime)
+                if not "-" in TahminEdilen_Kelime:
+                    print("Tebrikler, Oyunu kazandınız!")
+                    break
+        else:
+            print("Yanlış tahmin. Tekrar deneyin.\n")
+            TahminSayısı += 1
+        if TahminSayısı == 10:
+            print("Kaybettiniz! Gizli kelime:\n ", Gizli_Kelime)
+
+kurallar()
+Harf_TahminEtme()

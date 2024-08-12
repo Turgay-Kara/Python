@@ -1,0 +1,103 @@
+"""
+ #İF-ELİF-ELSE KOMUTU
+KatedilenMesafe = input("Ne kadar mesafe kat ettiniz?\n")
+KalanMesafe = input("Ne kadar mesafeniz kaldı?\n")
+if KatedilenMesafe > KalanMesafe:  #-> Bir koşulu kontrol etmek için if kullanılır ve sonuna : koyulur.
+    print("Yolun yarısını geçtiniz.")
+elif KatedilenMesafe < KalanMesafe:#-> Eğer 'if' komutundaki değer yanlış ise çalışacak komut elif tir.
+    print("Yolun yarısını geçmediniz.")
+else:                              #-> Eğer 2 koşul da çalışmazsa devreye else girer.
+    print("Yolun yarısındasınız.")
+"""
+#
+"""
+kullanici_adi = "TurgayKara"
+sifre = "12345"
+
+ad = input("Kullanıcı Adınızı giriniz : ")
+sifre_gir = input("Şifrenizi giriniz : ")
+
+if ad == kullanici_adi and sifre == sifre_gir:
+    print("Sisteme başarıyla giriş yaptınız.")
+elif kullanici_adi != ad:
+    print("Kullanıcı adınızı yanlış girdiniz.")
+else:
+    print("Şifrenizi yanlış girdiniz.")
+"""
+#
+"""
+result = input("Başvuru Sonucunu Giriniz : ")
+if "olumlu" in result.lower():
+    print("İşe alındınız!")
+elif "olumsuz" in result.lower():
+    print("İşe alınmadınız!")
+else:
+    print("Lütfen geçerli bir değer giriniz!")
+"""
+#
+"""
+print("Merhaba, bu program sayınızın 50'den >, < ya da = olduğunu söyler. :)")
+number = int(input("Sayı giriniz: "))
+if (number == 50):
+    print("Sayı 50.")
+elif (number < 50):
+    print("Sayı 50'den küçük.")
+else:
+    print("Sayı 50'den büyük.")
+"""
+#
+"""
+gender = input("Cinsiyet bilginizi giriniz (E/K): ")
+if gender.upper() == "E":
+    BirtOfDate = int(input("Doğum yılınızı giriniz: "))
+
+    if 2020 - BirtOfDate == 20 or 2020 - BirtOfDate > 20 and 2020 - BirtOfDate <= 28:
+        print("Askere gidebilirsiniz.")
+    elif 2020 - BirtOfDate != 20:
+        print("Askere gidemezsiniz.")
+    else:
+        print("Yaşınız hesaplanamadı.")
+elif gender.upper() == "K":
+    print("Kadınlar askere alınamıyor.")
+else:
+    print("Lütfen bir cinsiyet giriniz.")
+"""
+
+
+"""
+havadurumu = input("\n1-Gunesli\n2-Karli\n3-Yagmurlu\n4-Bulutlu\n\nHava nasil:")
+
+if havadurumu == "1":
+    print("Take sunglass.")
+
+elif havadurumu == "2":
+    print("Wear boats.")
+
+elif havadurumu == "3":
+    print("Take umbrella")
+
+else:
+    print("it's okay. You can go outside.")
+"""
+#
+
+"""
+list = ["0","1", "2","3","4","5"]
+while True:
+    hedefrakam = input("bir rakam giriniz:")
+
+    if hedefrakam in list:
+        print("\nistediginiz rakam listede bulunuyor.")
+
+
+    else:
+        print("\nistediginiz rakam listede bulunmuyor.\nSenin için bu rakami da listeye ekleyecegim.")
+
+        list.append(hedefrakam)
+        print("\niste, güncel liste!")
+        print(list)
+        
+        if len(list) == 10:
+            print("Tum rakamlari girdiniz. Program sonlandiriliyor.\n")
+            break
+"""

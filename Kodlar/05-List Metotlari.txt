@@ -1,0 +1,127 @@
+    #LİST
+#List (list) #-> Liste. Birden fazla data tipi depolama
+#sayılar = [1,2,3,9]
+#print(type(sayılar))    #-> 'list'
+#print(sayılar)
+
+
+    #LİSTE METOTLARI
+#hayvanlar = ["At", "Köpek", "Kedi", "Balık", "Timsah"]
+#print(hayvanlar)
+
+
+
+  #.append() METOTU
+#hayvanlar = ["At", "Köpek", "Kedi", "Balık", "Timsah"]
+#hayvanlar.append("Panda")   #-> .append() -> Listeye yeni eleman ekler.
+#print(hayvanlar)
+
+
+
+  #.remove() METOTU
+#hayvanlar = ["At", "Köpek", "Kedi", "Balık", "Timsah"]
+#hayvanlar.remove("Kedi")  #-> .remove() -> Listeden istenilen elemanı çıkartır.
+#print(hayvanlar)
+
+
+
+  #.pop() METOTU
+#hayvanlar = ["At", "Köpek", "Kedi", "Balık", "Timsah"]
+#hayvanlar.pop(2)             #-> .pop() -> Listeden istenilen elemanı çıkartır.
+#print(hayvanlar)             #-> () Boş bırakılırsa son elemanı çıkartır.
+
+
+
+  #.copy() METOTU
+#hayvanlar = ["At", "Köpek", "Kedi", "Balık", "Timsah"]
+#hayvanlar2 = hayvanlar.copy()      #-> Aktarılacak liste = kopyalanacak liste.copy()
+#print(hayvanlar2)
+
+
+
+  #.extend() METOTU
+#a = [1, 2, 3]
+#b = [5, 8, 4, 12, 10]
+#a.extend(b)             #-> a listesini ve b listesini birleştir.
+#print(a)
+
+
+
+  #.sort() METOTU
+#a = [1, 2, 3]
+#b = [5, 8, 4, 12, 10]
+#b.sort()                #-> .sort() Listedeki elemanları sıralamamıza yarar.
+#print(b)                #-> Büyükten küçüğe sıralar.
+
+#b.sort(reverse = True)  #-> reverse tersine çevirir.
+#print(b)                #-> Küçükten büyüğe sıralar.
+
+#.sort Sadece sayıları değil kelimeleri de sıralayabilir;
+#hayvanlar = ["At", "Köpek", "Kedi", "Balık", "Timsah"]
+#hayvanlar.sort(reverse = True)
+#print(hayvanlar)         #-> hayvanlar listesini tersten(reverse) sıralar
+
+
+  #max-min() fonksiyonu
+#x = [1,2,3,4,5,10,50]
+#print(max(x))   #-> Listedeki en büyük sayıyı gösterir.
+#print(min(x))   #-> Listedeki en küçük sayıyı gösterir.
+
+
+  #.count() METOTU
+#x = [5, 8, 4, 12, 10, 4]
+#print(x.count(4))   #-> .count() Istenilen elemanın kaç tane olduğunu söyler.
+
+
+
+  #.index() METOTU
+#y = [5, 8, 4, 12, 10]
+#print(y.index(5))   #-> .index() Belirtilenn elemanın kaçıncı indexte olduğunu söyler.
+
+
+
+  #.insert() METOTU
+#b = [5, 8, 4, 12, 10]
+#b.insert(1, "TURGAY")  #-> .insert() Belirtilen indexe istenilen elemanı ekler.(Belirtilen indexi silmez.)
+#print(b)               #-> 1.index'e "TURGAY" elemanını ekle.
+
+
+
+  #.clear() METOTU
+#a = [1, 2, 3]
+#a.clear()       #-> İstenilen listedeki tüm elemanları siler(.clear).
+#print(a)
+
+
+
+  #slicing[] METOTU
+#hayvanlar = ["At", "Köpek", "Kedi", "Balık", "Timsah"]
+#print(hayvanlar)
+#print(hayvanlar[2:4])  #-> 2. ve 4. Elemanların arasındaki elemanları print eder. 2. eleman dahil, 4. eleman dahil DEĞİL.
+#print(hayvanlar[:3])    #-> [:3] sayı sağa yazılırsa 3. Elemana kadar print eder. 3. eleman dahil DEĞİL. #slicing metotunda [x:y] y hiçbir zaman dahil edilmez.
+#print(hayvanlar[3:])    #-> [3:] sayı sola yazılırsa 3. Elemandan sonraki elemanları print eder. 3. eleman da dahil.
+#print(hayvanlar[0:5:3]) #-> [x:y:z] -> z = Kaç karakter aralıklarla gideceğini söyler.
+#--> 0.Karakterden 3.Karakter dahil olmamak üzere 2şer aralıklarla(2.dahil) print et. <--#
+
+#hayvanlar[3] = "Arı"   #-> Listenin 3.elemanı yerine istenilen elemanı koy.
+#print(hayvanlar)
+
+
+
+    # SPLIT -> Listedeki elemanları 2ye böler
+#yorumbirakanlar = ["Talha Kara", "Turgay Kara", "Eşref", "Ayfer", "Engin"]
+#ad, soyad = yorumbirakanlar[1].split()[0], yorumbirakanlar[1].split()[1]   #-> listedeki 1.elemanın 0. parçası + 1.elemanın 1.parçası
+#print(ad)
+#print(soyad)
+
+
+
+#insanlar = [["Turgay", "Kara"], ["Talha", "Beyaz"], ["Eşref", "Siyah"]]
+#print(insanlar[0])    #-> Turgay, Kara
+#print(insanlar[0][1]) #-> Kara
+#print(insanlar[2][0]) #-> Eşref
+#print(len(insanlar))  #-> len -> Listenin kaç elemandan oluştuğunu söyler -> 3
+
+#x = "Turgay"
+#text = (len(x))
+#print(text)

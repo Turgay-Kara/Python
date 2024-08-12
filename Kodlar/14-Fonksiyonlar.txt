@@ -1,0 +1,20 @@
+    #FONKSİYONLAR (Functions)
+#def fonksiyonOrnegi():
+    #print("Coding Summit'e hoşgeldiniz")
+#fonksiyonOrnegi()
+
+
+#def KaçYaşındasın(yaş):
+    #print("Ben ", yaş, " yaşımdayım.")
+#KaçYaşındasın(15)  #-> Ben  15  yaşımdayım.
+
+
+#def kare_al(x):
+    #print(x**2)
+#kare_al(5)  #-> 5'in karesini alır.
+
+
+
+#def alan(r, pi = 3.14):
+    #print(pi*r**2)
+#alan(12)    #-> Pi tanımlı olduğu için Sadece yarı çapı yazarak alanı bulduk.

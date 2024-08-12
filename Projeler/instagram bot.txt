@@ -1,0 +1,24 @@
+from instabot import Bot
+import schedule
+import time
+
+bot = Bot()
+
+username = "kullanıcı adı"
+password = "şifre"
+sevgilim = "göndermek istediğin kişi"
+
+bot.login(username=username, password=password)
+
+def gunaydin():
+    message = "Python instabot try.4-again"
+    girlfriend = [sevgilim]
+
+    bot.send_message(message, sevgilim)
+
+
+schedule.every().day.at("10:00").do(gunaydin)
+
+while True:
+    schedule.run_pending()
+    time.sleep(1)

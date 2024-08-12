@@ -1,0 +1,32 @@
+ogrenciler = {
+        '120': {
+            "ad":"Onur",
+            "soyad":"Yesir",
+            'telefon':"123123"
+        },
+        '303': {
+            "ad":"Batu",
+            "soyad":"Durmaz",
+            "telefon":"23434"    
+        },
+        '505': {
+            "ad":"Mehmet",
+            "soyad":"Çukur",
+            "telefon": "345345"       
+        },
+    }   
+    #1-Bilgileri verilen öğrencileri kullanıcıdan adlığımız bilgilerle dictionary içinde saklayınız.
+
+ogrenciler = {}
+number = input("öğrenci no: ")
+name = input("öğrenci ad: ")
+surname = input("öğrenci soyad: ")
+phone = input("öğrenci telefon: ")
+
+ogrenciler[number] = {
+    'ad': name,
+    'soyad': surname,
+    'telefon': phone
+}
+print(ogrenciler)
+    #2-Öğrenci numarasını kullanıcıdan alıp ilgili öğrenci bilgisini gösterin.       

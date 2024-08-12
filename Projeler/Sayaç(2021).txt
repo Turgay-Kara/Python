@@ -1,0 +1,5 @@
+sayaç = input("Ne kadar süre tutmak istiyorsunuz: ")
+while sayaç >= 0:
+    print("Sayaç = " + str(sayaç))
+    sayaç = sayaç -1
+print("Sayaç bitti.")

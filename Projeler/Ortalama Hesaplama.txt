@@ -1,0 +1,25 @@
+ #1
+not1 = int(input("İlk sınav notunu girin\n"))
+not2 = int(input("ikinci sınav notunu girin\n"))
+not3 = int(input("Üçüncü sınav notunu girin\n"))
+ortalama = (not1 + not2 + not3)/3
+print("Ortalama:" + str(ortalama))
+
+
+ #2
+ders_notu = int(input("Notunuzu Giriniz : "))
+
+if ders_notu >= 90 and ders_notu <= 100:
+    print("AA aldınız")
+elif ders_notu >= 80 and ders_notu < 90:
+    print("BB aldınız")
+elif ders_notu >= 70 and ders_notu < 80:
+    print("CC aldınız")
+elif ders_notu >= 60 and ders_notu < 70:
+    print("DD aldınız")
+elif ders_notu >= 50 and ders_notu < 60:
+    print("FF aldınız")
+elif ders_notu >= 0 and ders_notu < 50:
+    print("Dersten kaldınız.")
+else:
+    print("Geçerli bir not giriniz.")
