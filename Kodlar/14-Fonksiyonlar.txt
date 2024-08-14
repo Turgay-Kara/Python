@@ -1,20 +1,71 @@
-    #FONKSİYONLAR (Functions)
-#def fonksiyonOrnegi():
-    #print("Coding Summit'e hoşgeldiniz")
-#fonksiyonOrnegi()
+    #FONKSİYONLAR (Functions)   Kodun devaminda da kullanacaksan sonradan da cagirabilirsin.
+
+# def <fonksiyon_ismi>(<argümanlar>): # snake_case
+
+"""
+ Bu kod ne ise yarar?                # docstring    -> Kodu okuanin daha rahat anlamasi icin kullanilabilir.
+"""
+
+#...                                  # return/print farklari
+
+"""
+# def (print)
+def bes_bastir():
+    print("5")      # 5
+#bes_bastir()
 
 
-#def KaçYaşındasın(yaş):
-    #print("Ben ", yaş, " yaşımdayım.")
-#KaçYaşındasın(15)  #-> Ben  15  yaşımdayım.
+# def (return)
+def bes_dondur():
+    return 5
+#print(bes_dondur())
 
 
-#def kare_al(x):
-    #print(x**2)
-#kare_al(5)  #-> 5'in karesini alır.
+a = bes_bastir()
+print(a)        # Def'i print ile yazdimiz icin "None" output'u verecek.
+
+b = bes_dondur()
+print(b)        # Def'i return ile yazdigimiz icin "5" output'u verecek.
+
+"""
+#def sayi_dondur(sayi):
+    #return sayi
+#print(sayi_dondur(37))
+
+"""
+
+def sayi_dondur(sayi=250):
+    return sayi
+print(sayi_dondur(89))      #-> 89 ciktisini verecek.
 
 
+def sayi_dondur(sayi=250):
+    return sayi
+print(sayi_dondur())        #-> Arguman vermeden cagirdigimiz icin Default olani(250) verecek.
+"""
 
-#def alan(r, pi = 3.14):
-    #print(pi*r**2)
-#alan(12)    #-> Pi tanımlı olduğu için Sadece yarı çapı yazarak alanı bulduk.
+"""
+def buyuk_sayi_dondur(a,b):
+    if a>b:
+        return a
+    elif b>a:
+        return b
+print(buyuk_sayi_dondur(5,10))
+"""
+
+
+""" # Hatali Kullanim   
+def buyuk_sayi_dondur(a,b):
+    return a
+    return b           # Sart vermeden 2 tane Return kullandigimiz icin kod ilk gordugunu calistiracak-> a yani 5'i dondurecek
+    #if a>b:
+        #return a
+    #elif b>a:
+        #return b
+print(buyuk_sayi_dondur(5,10))
+"""
+
+
+#def KacYasindasin(yas):
+    #print("Ben ", yas, " yasimdayim.")
+#KacYasindasin(15)  #-> Ben  15  yasimdayim.
