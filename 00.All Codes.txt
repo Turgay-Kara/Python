@@ -123,8 +123,8 @@
 #print(b + 3) #-> 4.34
 
 
-#isim, isim2 = "turgay", "talha"
-#print(isim, isim2)  #-> turgay talha
+#isim, isim2 = "turgay", "bursa"
+#print(isim, isim2)  #-> turgay busra
 
 
  #sabitler;
