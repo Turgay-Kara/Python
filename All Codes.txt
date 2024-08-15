@@ -29,8 +29,8 @@
 #y""")
 
 
-#print("Turgay\nAdamdır.")   #-> \n paragraf anlamına gelir yani \n'den sonra bir alt satıra geçer.
-#print("Turgay\tAdamdır.")   #-> \t bir TAB boşluk bırakmak için kullanılır.
+#print("Turgay\nBusra.")   #-> \n paragraf anlamına gelir yani \n'den sonra bir alt satıra geçer.
+#print("Turgay\tBusra.")   #-> \t bir TAB boşluk bırakmak için kullanılır.
 
 
 #print("Hello", end="-")
@@ -123,8 +123,8 @@
 #print(b + 3) #-> 4.34
 
 
-#isim, isim2 = "turgay", "talha"
-#print(isim, isim2)  #-> turgay talha
+#isim, isim2 = "turgay", "bursa"
+#print(isim, isim2)  #-> turgay busra
 
 
  #sabitler;
