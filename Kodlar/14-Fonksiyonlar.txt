@@ -3,7 +3,7 @@
 # def <fonksiyon_ismi>(<argümanlar>): # snake_case
 
 """
- Bu kod ne ise yarar?                # docstring    -> Kodu okuanin daha rahat anlamasi icin kullanilabilir.
+ Bu kod ne ise yarar?                # docstring    -> Kodu okuyanin daha rahat anlamasi icin kullanilabilir.
 """
 
 #...                                  # return/print farklari
