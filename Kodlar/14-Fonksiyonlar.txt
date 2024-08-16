@@ -133,5 +133,5 @@ def gobek_adi_yazdir(**kwargs):
     else:
         print("Gobekadi Yok")
 
-print(gobek_adi_yazdir(adi = "Erol", soyadi="Gün"))         #-> Gobek adini cekip yazdiracaktir. Eger gobekadi diye bir elemanimiz olmasaydi,
-"""                                                         #-> Else degeri donecekti.
+print(gobek_adi_yazdir(adi = "Erol", soyadi="Gün", gobekadi="Mesut"))	#-> Gobek adini cekip yazdiracaktir. Eger gobekadi diye bir elemanimiz olmasaydi,
+"""                                                         		#-> Else degeri donecekti.
