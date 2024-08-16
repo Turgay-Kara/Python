@@ -69,7 +69,6 @@ print(buyuk_sayi_dondur(5,10))
 #def KacYasindasin(yas):
     #print("Ben ", yas, " yasimdayim.")
 #KacYasindasin(15)  #-> Ben  15  yasimdayim.
-<<<<<<< HEAD
 
 
 
@@ -126,7 +125,7 @@ print (b)
 #print(isim_soyisim_birlestir("Erol","Mesut","Gün"))
 
 
-
+"""
 # KWARGS
 def gobek_adi_yazdir(**kwargs):
     if 'gobekadi' in kwargs:
@@ -134,7 +133,5 @@ def gobek_adi_yazdir(**kwargs):
     else:
         print("Gobekadi Yok")
 
-print(gobek_adi_yazdir(adi = "Erol", soyadi="Gün"))         #-> Gobek adini cekip yazdiracaktir. Eger gobekadi diye bir elemanımız olmasaydi,
-                                                            #-> Else degeri donecekti.
-=======
->>>>>>> 21340a92c01e02193c87d70c4e78bebc9ed5ff25
+print(gobek_adi_yazdir(adi = "Erol", soyadi="Gün"))         #-> Gobek adini cekip yazdiracaktir. Eger gobekadi diye bir elemanimiz olmasaydi,
+"""                                                         #-> Else degeri donecekti.
