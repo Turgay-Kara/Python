@@ -3,7 +3,7 @@
 # def <fonksiyon_ismi>(<argümanlar>): # snake_case
 
 """
- Bu kod ne ise yarar?                # docstring    -> Kodu okuanin daha rahat anlamasi icin kullanilabilir.
+ Bu kod ne ise yarar?                # docstring    -> Kodu okuyanin daha rahat anlamasi icin kullanilabilir.
 """
 
 #...                                  # return/print farklari
@@ -69,6 +69,7 @@ print(buyuk_sayi_dondur(5,10))
 #def KacYasindasin(yas):
     #print("Ben ", yas, " yasimdayim.")
 #KacYasindasin(15)  #-> Ben  15  yasimdayim.
+<<<<<<< HEAD
 
 
 
@@ -135,3 +136,5 @@ def gobek_adi_yazdir(**kwargs):
 
 print(gobek_adi_yazdir(adi = "Erol", soyadi="Gün"))         #-> Gobek adini cekip yazdiracaktir. Eger gobekadi diye bir elemanımız olmasaydi,
                                                             #-> Else degeri donecekti.
+=======
+>>>>>>> 21340a92c01e02193c87d70c4e78bebc9ed5ff25
