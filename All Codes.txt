@@ -5,7 +5,7 @@
    | 3.20-25 dk çaliş - ara verin.             #
    | 4.Hata yap ve çözüm bulun.                #
    | 5.Çalişma arkadaşlari bulun.              #
-   | 6.Anladiğiniizi öğretmeye çalisin.        #
+   | 6.Anladiğinizi öğretmeye çalisin.        #
    | 7.Projeler yapin.                         #
    |___________________________________________#
 """
