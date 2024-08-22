@@ -17,9 +17,6 @@
 
 
 
-
-
-
             # VERI OKURYAZARLIGI
 
 #   Degisken: Birimden birime farkli deger alan nicelik
@@ -74,12 +71,10 @@
 
 
 
-
-
-
             # PYTHON PROGRAMLAMA
-<<<<<<< HEAD
-#   ...
-=======
-#   ...
->>>>>>> 1500ea688ae325a97732310e6f4739ca1ecb3427
+# ...
+
+
+
+            # VERI MANIPULASYONU (NumPy & Pandas)
+#
