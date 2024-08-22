@@ -9,7 +9,7 @@
    | 7.Projeler yapin.                         #
    |___________________________________________#
 """
-    #PRİNT
+    #PRINT
 #print('Merhaba Dunya')
 
 #print('Turkiye'nin en kalabalik sehri istanbuldur.')
@@ -116,7 +116,7 @@
     #print(ulke)                             #-> listlerin len(eleman sayisi) birbirine esit olmasi lazim.
 
 
-    #DEgİsKENLER ve SABİTLER (Variables and Constants)
+    #DEgIsKENLER ve SABITLER (Variables and Constants)
  #degiskenler;
 #a = 'turgay' #degiskenin ismi a, degeri turgay
 #b = 1.34
@@ -158,16 +158,16 @@ print(type(x))         #-> x'in yani para'nin tipini gosterir. -> 'float'
 
 
 
-    #STRİNG(str) #-> "cift tirnak" ("123", "1.23", "TURGAY", "A")
+    #STRING(str) #-> "cift tirnak" ("123", "1.23", "TURGAY", "A")
 #isim = "Turgay Kara"
 #sifre = "sifre123e"
-#yas = "16" #->INTEGER DEgİL BU BİR STRİNG ->cunku " icine alinmis.
+#yas = "16" #->INTEGER DEgIL BU BIR STRING ->cunku " icine alinmis.
 #print(type(yas))    #-> 'str'
 #print(isim[3]) #-> 3.karakteri yazar -> "g"
 
 
 
-    #STRİNG "METOTLAR"
+    #STRING "METOTLAR"
 #isim = "Turgay Kara"
 #text1 = isim.center(10, '*')            #-> turgay = 6 karakterli, .center parantezine 10yazdik 6 turgayda var kaldi 4, bu 4 karakteri isim'in yanlarina dagitir.
 #text2 = isim.rjust(10, '*')             #-> .center'a benziyor ama turgay'in sagina 4 karakter * yazdirir.
@@ -183,7 +183,7 @@ print(type(x))         #-> x'in yani para'nin tipini gosterir. -> 'float'
 #text12 = isim.capitalize()              #-> Cumlenin ilk kelimesinin bas harfini buyuk yapar(Digerlerini kucultur.)
 #text13 = isim.count("a")                #-> Istenilen elemanin kac tane oldugunu soyler. -> 1
 #text14 = isim.lower().count("t")        #-> Tum harfleri kucultur ve istenilen elemanin cumlede kac kere gectigini sayar.
-#text15 = isim.upper().count("T")        #-> İstenilen elemani buyulterek istenilen elemani sayar.
+#text15 = isim.upper().count("T")        #-> Istenilen elemani buyulterek istenilen elemani sayar.
 #text16 = isim.find("Kara")              #-> Bulmamiza yarar. -> 7.indexten itibaren basladigini bize soyler.
 #text17 = isim.index("g")                #-> Kacinci indexten itibaren oldugunu bize soyler. -> 3
 #text18 = isim.replace("Kara", "Beyaz")  #-> .replace("Degistirmek istedigin.", "Yerine koyacagin.")
@@ -213,14 +213,14 @@ print(yagmuryagiyor) #-> True
 # {}  -> Dictionary (sozluk)
 
 
-    #LİST
+    #LIST
 #List (list) #-> Liste. Birden fazla data tipi depolama
 #sayilar = [1,2,3,9]
 #print(type(sayilar))    #-> 'list'
 #print(sayilar)
 
 
-    #LİSTE METOTLARI
+    #LISTE METOTLARI
 
 #hayvanlar = ["At", "Kopek", "Kedi", "Balik", "Timsah"]
 #print(hayvanlar)
@@ -303,7 +303,7 @@ print(yagmuryagiyor) #-> True
 
   #.clear() METOTU
 #a = [1, 2, 3]
-#a.clear()       #-> İstenilen listedeki tum elemanlari siler(.clear).
+#a.clear()       #-> Istenilen listedeki tum elemanlari siler(.clear).
 #print(a)
 
 
@@ -311,8 +311,8 @@ print(yagmuryagiyor) #-> True
   #slicing[] METOTU
 #hayvanlar = ["At", "Kopek", "Kedi", "Balik", "Timsah"]
 #print(hayvanlar)
-#print(hayvanlar[2:4])  #-> 2. ve 4. Elemanlarin arasindaki elemanlari print eder. 2. eleman dahil, 4. eleman dahil DEgİL.
-#print(hayvanlar[:3])    #-> [:3] sayi saga yazilirsa 3. Elemana kadar print eder. 3. eleman dahil DEgİL. #slicing metotunda [x:y] y hicbir zaman dahil edilmez.
+#print(hayvanlar[2:4])  #-> 2. ve 4. Elemanlarin arasindaki elemanlari print eder. 2. eleman dahil, 4. eleman dahil DEgIL.
+#print(hayvanlar[:3])    #-> [:3] sayi saga yazilirsa 3. Elemana kadar print eder. 3. eleman dahil DEgIL. #slicing metotunda [x:y] y hicbir zaman dahil edilmez.
 #print(hayvanlar[3:])    #-> [3:] sayi sola yazilirsa 3. Elemandan sonraki elemanlari print eder. 3. eleman da dahil.
 #print(hayvanlar[0:5:3]) #-> [x:y:z] -> z = Kac karakter araliklarla gidecegini soyler.
 #--> 0.Karakterden 3.Karakter dahil olmamak uzere 2ser araliklarla(2.dahil) print et. <--#
@@ -409,7 +409,7 @@ print(len(kimlik))  #-> Eleman sayisini gosterir. -> 4
 print(kimlik.keys())       #-> Sozlukteki anahtarlari gosterir.
 print(kimlik.values())     #-> Sozlukteki degerleri gosterir.
 print(kimlik.items())      #-> Anahtalaari ve Degerleri yanyana gosterir.
-print(kimlik.get("yer"))   #-> İstenilen anahtarin degerini gosterir.
+print(kimlik.get("yer"))   #-> Istenilen anahtarin degerini gosterir.
 print(kimlik.update({"Anne_adi":"Ayfer"}))  #-> Listeye yeni Anahtar(key) ve Deger(value) ekledik.
 print(kimlik.copy())       #-> Kimligi kopyalar.
 kimlik.pop("isim")         #-> Sozlukten istenilen degeri cikarir.
@@ -423,7 +423,7 @@ ing_sozluk = {"dil": "language", "bilgisayar": "computer", "masa": "table"}
 sorgu = input("Lutfen anlamini ogrenmek istediginiz kelimeyi yaziniz: ")
 print(ing_sozluk.get(sorgu, "Bu kelime veritabanimizda yoktur!"))
 #->Birinci arguman sorgulamak istedigimiz sozluk ogesidir.
-#->İkinci arguman ise bu ogenin sozlukte bulunmadigi durumda kullaniciya hangi mesajin gosterilecegini belirtir.
+#->Ikinci arguman ise bu ogenin sozlukte bulunmadigi durumda kullaniciya hangi mesajin gosterilecegini belirtir.
 """
 
 #
@@ -546,14 +546,14 @@ print(type(z))  #-> 'str'   -> Kelime
 
 
 #print("Benim dogum yilim 2005")    #-> 'str'
-#print("Benim dogum yilim" + 2005) #ERROR #-> Hem İnteger hem String kullandigimiz icin ERROR verir.
+#print("Benim dogum yilim" + 2005) #ERROR #-> Hem Integer hem String kullandigimiz icin ERROR verir.
 #print("Benim dogum yilim " + str(2005))
 
 
 
 
 
-  #KARsILAsTIRMA OPERAToRLERİ
+  #KARsILAsTIRMA OPERAToRLERI
  # <   #-> Kucuk mudur?
  # >   #-> Buyuk mudur?
  # <=  #-> Kucuk mudur veya esit midir?
@@ -592,7 +592,7 @@ print(5 == 5 or 5 < 2)      #-> True
 print(6 == 5 or 5 < 1)     #-> False
 """
 
-    #AİTLİK OPERAToRu
+    #AITLIK OPERAToRu
  #Aitlik operatoru, bir karakter dizisi ya da sayinin,
  #Herhangi bir veri tipi icinde bulunup bulunmadigini sorgulamamizi saglayan operatordur.
 
@@ -607,7 +607,7 @@ print("e" not in a) #-> True
 print("b" not in a) #-> False
 """
 
-    #ATAMA OPERAToRLERİ
+    #ATAMA OPERAToRLERI
   # += operatoru
 #a = 23
 #a = a + 5
@@ -653,7 +653,7 @@ print("b" not in a) #-> False
 
 
 
-  #ARİTMETİK
+  #ARITMETIK
  # Toplama  x+y
  # cikarma  x-y
  # carpma   x*y
@@ -662,7 +662,7 @@ print("b" not in a) #-> False
  # Mod Alma x%y      #-> Bolmenin Kalanini verir.
  # us alma  x**y     #-> x ussu y
 
-  #DİKKAT: İsLEM oNCELİgİ !!!
+  #DIKKAT: Islem Onceligi !!!
 """
 x = 3
 y = 5
@@ -691,7 +691,7 @@ print(type(yas))
 
 
 """
- #İF-ELİF-ELSE KOMUTU
+ #IF-ELIF-ELSE KOMUTU
 KatedilenMesafe = input("Ne kadar mesafe kat ettiniz?\n")
 KalanMesafe = input("Ne kadar mesafeniz kaldi?\n")
 if KatedilenMesafe > KalanMesafe:  #-> Bir kosulu kontrol etmek icin if kullanilir ve sonuna : koyulur.
@@ -720,9 +720,9 @@ else:
 """
 result = input("Basvuru Sonucunu Giriniz : ")
 if "olumlu" in result.lower():
-    print("İse alindiniz!")
+    print("Ise alindiniz!")
 elif "olumsuz" in result.lower():
-    print("İse alinmadiniz!")
+    print("Ise alinmadiniz!")
 else:
     print("Lutfen gecerli bir deger giriniz!")
 """
@@ -865,7 +865,7 @@ else:               #-> Burdaki icindir.(2)
 
 
 
-    #FOR-WHİLE DoNGuSu
+    #FOR & WHILE DoNGuSu
  #-> Bir durumun surekli tekrar etmesine denir.
 #for Harfler in "CODING SUMMIT":     #-> : koymayi unutma.!
     #print(Harfler)
@@ -960,7 +960,7 @@ else:
  #ic ice dongu
 sayi = [1,2,3,4,5,6,7]
 sayi2 = [1, 2, 3]
-for sayi in sayi:    #-> İfadeyi sayilar icindeki eleman kadar dondurur.
+for sayi in sayi:    #-> Ifadeyi sayilar icindeki eleman kadar dondurur.
     for x in sayi2:
         print(x)
 else:
@@ -995,7 +995,7 @@ for x in range(100):    #-> 100 defa Print et.
 
 
 
-    #FONKSİYONLAR (Functions)   Kodun devaminda da kullanacaksan sonradan da cagirabilirsin.
+    #FONKSIYONLAR (Functions)   Kodun devaminda da kullanacaksan sonradan da cagirabilirsin.
 
 # def <fonksiyon_ismi>(<argumanlar>): # snake_case
 
@@ -1104,7 +1104,7 @@ name = "Turgay"
 surname = "Kara"
 age = 20
 job = "Full-Stack deweloper"
-city = "İstanbul"
+city = "Istanbul"
 salery = 12000
 print(f"Ben {name} {surname}\n{age} yasimdayim.\n{city} sehrinde yasiyorum.\nAyda {salery} dolar kazaniyorum.")
 """
@@ -1332,3 +1332,110 @@ class Employees_yeni():
 turgay = Employees_yeni("a", "b", "c")
 print(turgay.Adress)    #-> Output: c
 """
+
+
+
+    # Fonksiyonel Prgoramlama
+
+# Yan Etkisiz Fonksiyon Ornek-1 (basit yan etki)
+
+"""
+A = 9
+
+def impure_sum(b):
+    return b + A
+
+def pure_sum(a, b):
+    return a + b
+
+print(impure_sum(6))    #-> Sonuc A'ya bagli olarak degisir. (Yan Etki)
+print(pure_sum(3,4))    #-> Sonuc her zaman 7 olur.
+
+"""
+
+
+
+# Yan Etkisiz Fonksiyon Ornek-2 (olumcul yan etki)
+# Islem sonucunda C:\Users\Turgay> klasoru icerisindeki deneme.txt adli metin dosyasisin verilerini output olarak verecektir.
+
+#class LineCounter:
+    #def __init__(self, filename):
+        #self.file = open(filename, 'r')
+        #self.lines = []
+    
+    #def read(self):
+        #self.lines = [line for line in self.file]
+    
+    #def count(self):
+        #return len(self.lines)
+
+
+#lc = LineCounter('deneme.txt') 
+
+#print(lc.lines) 
+#print(lc.count())
+
+#lc.read()
+
+#print(lc.lines)
+#print(lc.count())
+
+#FP
+
+#def read(filename):
+  #with open(filename, 'r') as f:
+      #return [line for line in f]
+
+#def count(lines):
+  #return len(lines)
+
+#example_lines = read('deneme.txt')
+#lines_count = count(example_lines)
+#lines_count
+
+
+"""
+    # isimsiz fonksiyonlar
+def old_sum(a, b):
+    return a + b
+
+print(old_sum(4,5))
+
+
+    # LAMBDA
+new_sum = lambda a,b: a + b
+print(new_sum(4,5))
+
+sirasiz_liste = [("b",3), ("a", 8), ("d", 12), ("c", 1)]
+print(sirasiz_liste)
+
+    # Kucukten buyuge dogru siralayalim:
+print(sorted(sirasiz_liste, key = lambda x: x[1]))  # Output: [('c', 1), ('b', 3), ('a', 8), ('d', 12)]
+"""
+
+
+"""
+    # Vektorel Operasyonlar (OOP)
+a = [1,2,3,4]
+b = [2,3,4,5]
+
+ab = []
+
+range(0, len(a))
+
+for i in range(len(a)):
+    ab.append(a[i]*b[i])
+
+print(ab)       #-> Output: [2  6 12 20]
+"""
+
+#   Yukaridaki ornekte ayni islemi daha cok caba harcayarak yapmistik.
+
+#import numpy as np
+#a = np.array([1,2,3,4])
+#b = np.array([2,3,4,5])
+#print(a*b)      #-> Output: [2  6 12 20]
+
+
+
+    # MAP & FILTER & REDUCE
