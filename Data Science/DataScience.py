@@ -79,4 +79,3 @@
 
             # PYTHON PROGRAMLAMA
 #   ...
-#   Bu alani oturtmadan kursa devam etme!
