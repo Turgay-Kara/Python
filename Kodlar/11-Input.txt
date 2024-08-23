@@ -1,9 +1,9 @@
      #INPUT
   #input()
+
 """
 isim = input("Adın ne?\n")
 print("Merhaba " + isim)
 yaş = input("Yaşın kaç?\n")
 print("Sen " + yaş + " yaşındasın")
-print(type(yaş))
 """
