@@ -1,4 +1,5 @@
     #DEĞİŞKENLER ve SABİTLER (Variables and Constants)
+
  #değişkenler;
 #a = 'turgay' #değişkenin ismi a, değeri turgay
 #b = 1.34
