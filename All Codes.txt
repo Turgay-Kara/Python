@@ -865,7 +865,7 @@ else:               #-> Burdaki icindir.(2)
 
 
 
-    #FOR & WHILE DoNGuSu
+    #FOR & WHILE DONGUSU
  #-> Bir durumun surekli tekrar etmesine denir.
 #for Harfler in "CODING SUMMIT":     #-> : koymayi unutma.!
     #print(Harfler)
