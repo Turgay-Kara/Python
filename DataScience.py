@@ -85,6 +85,7 @@
 """
 
 # NumPy -> Bilimsel islemler icin kullanilir.
+import numpy as np  #-> Bu her zaman calisir durumda olmali.
 
 #import numpy as np
 #a = np.array([1,2,3,4])
@@ -97,12 +98,10 @@
 
 
     # 0'dan Array olusturmak
-import numpy as np  #-> Bu her zaman calisir durumda olmali.
-
 #print(np.zeros(5, dtype = "int"))       #-> [0 0 0 0 0]
 #print(np.ones(5, dtype = "int"))        #-> [1 1 1 1 1]
 #print(np.ones((3,5), dtype = "int"))    #-> 3 satir, 5 sutunluk bir Array olusturdu.
-#print(np.full(3,5), 3)                  #-> 3'lerden olusan bir sekilde yaptik.
+#print(np.full(3, 5))                    #-> 3'lerden olusan bir sekilde yaptik.
 #print(np.arange(0, 31, 3))              #-> 0'dan 30'a kadar ucer ucer say. *
 #print(np.linspace(0,1,10))              #-> 0 ve 1 arasinda 10 tane deger olustur. *
 #print(np.random.normal(10,4, (3,4)))    #-> Matris (2 boyutlu) # sayilari random verecek.
@@ -120,6 +119,35 @@ import numpy as np  #-> Bu her zaman calisir durumda olmali.
 #print(b)
 #print(b.ndim)   #-> 2 boyutlu oldugu icin "2" ciktisini verecek.
 #...
+
+#print(np.random.randint(10, size = (5,3,2)))    #-> 5 blok, 3 satir, 2 sutun
+
+
+# >> randint ile olusturulmus bir Zar ornegi: <<
+"""
+atis = 0
+yazi = 0
+tura = 0
+print("\n")
+while yazi < 100 and tura < 100:
+    para = np.random.randint(0,2)
+    if para == 0:
+        print("Yazi Geldi!")
+        yazi +=1
+        atis +=1
+
+    if para == 1:
+        print("Tura Geldi!")
+        tura +=1
+        atis +=1
+
+ortalama_yazi = (yazi / atis) * 100
+ortalama_tura = (tura / atis) * 100
+
+print("\nPara Toplam:", atis, "Kere Atildi!\n")
+print("Yazi Gelme Ihtimali: %{:.1f} olarak belirlendi.".format(ortalama_yazi))
+print("Tura Gelme Ihtimali: %{:.1f} olarak belirlendi.\n".format(ortalama_tura))
+"""
 
 
 
@@ -159,6 +187,7 @@ import numpy as np  #-> Bu her zaman calisir durumda olmali.
 
 #print(np.concatenate([a,a]))            #-> Satir bazinda birlestirir.
 #print(np.concatenate([a,a], axis = 1))  #-> Sutun bazinda birlestirir.  (0 satirlari, 1 sutunlari ifade eder.)
+                                         #-> 2 Boyutlularda ise yarar.
 
 
 
@@ -174,6 +203,7 @@ import numpy as np  #-> Bu her zaman calisir durumda olmali.
 #print(a)        #[1 2 3]
 #print(b)        #[99 99]
 #print(c)        #[3 2 1]
+
 
 
     # 2D ayirma
@@ -200,6 +230,7 @@ import numpy as np  #-> Bu her zaman calisir durumda olmali.
 #v = np.array([3,4,1,2])
 #v.sort()    #-> Array'i komple sirali olan sekliyle degistirdi.
 #print(v)    #-> [3,4,1,2] cikmasi gerekirken [1 2 3 4] ciktisini verdi.
+
 
     # 2D siralama
 #m = np.random.normal(20, 5, (3,3))  #-> Ortalamasi 20, Standart Sapmasi  5 olacak sekilde 3'e 3'luk bir Array olustur.
