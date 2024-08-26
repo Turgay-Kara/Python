@@ -1,7 +1,0 @@
-import random
-while True:
-    ZarSayı = int(input("Zarı kaç defa atmak istiyorsun?\n"))   #-> Kaç defa tekrar etmek istediğini programa söylemek için str değil int olarak alınır.
-
-    for i in range(ZarSayı):
-        zar = random.randint(1, 6)  #-> random.randint -> int için; .choice Değil, .randint kullanılır.
-        print(zar)
