@@ -85,7 +85,7 @@
 """
 
 # NumPy -> Bilimsel islemler icin kullanilir.
-import numpy as np  #-> Bu her zaman calisir durumda olmali.
+#import numpy as np  #-> Bu her zaman calisir durumda olmali.
 
 #import numpy as np
 #a = np.array([1,2,3,4])
@@ -205,7 +205,6 @@ print("Tura Gelme Ihtimali: %{:.1f} olarak belirlendi.\n".format(ortalama_tura))
 #print(c)        #[3 2 1]
 
 
-
     # 2D ayirma
 #m = np.arange(16).reshape(4,4)
 
@@ -238,3 +237,140 @@ print("Tura Gelme Ihtimali: %{:.1f} olarak belirlendi.\n".format(ortalama_tura))
 
 #print(np.sort(m, axis = 1))         #-> Satir bazinda bir Siralama gerceklestirdi.
 #print(np.sort(m, axis = 0))         #-> Sutun bazinda bir Siralama gerceklestirdi.
+
+
+    # Index ile Elemanlara Erismek
+#a = np.random.randint(10, size = 10)
+#print(a)
+#print(a[0])     #-> ilk elemana eristik.
+#a[0] = 100      #-> Elemanin degerini degistirebiliriz.
+
+#m = np.random.randint(10, size = (3,5))
+#print(m)
+#print(m[1,2])   #-> 2. Satirin, 3. Elemanina erisiriz.
+#m[1,4] = 99     #-> 2. Satirin, 5. Elemanini 99 olarak degistirdik.
+#m[1,4] = 2.2    #-> Float olarak ekleyemez. O yuzden sadece 2 diye ekleyecek.
+#print(m)
+
+
+    # Slice islemleri
+#a = np.arange(20,30)
+#print(a)
+#print(a[0:3])   #-> 0'dan 3. elemana kadar yazdirir
+#print(a[0::2])  #-> ilk elemandan baslayarak ikiser ikiser sona kadar yazdirir.
+
+
+    # 2D Slice islemleri    #-> (0 1 2 diye sayma yap!)
+#m = np.random.randint(10, size = (5,5))
+#print(m)
+#print(m[0:,2])         #-> Butun satirlari sec, 2. sutun'u getir.
+#print(m[2:,0])         #-> 2. Satir ve sonrasini sec, 0. sutunu getir.
+#print(m[0:2, 0:3])     #-> 0'dan 2'ye kadar satirlari sec, 0'dan 3'e kadar sutunlari getir.
+#print(m[0:,0:2])       #-> Butun satirlari sec, 0 ve 1. sutunu getir.
+
+
+    # Alt Kume islemleri
+#a = np.arange(1,26).reshape(5,5)
+#alt_a = a[0:3, 0:2]
+
+#alt_a[0,0] = 999
+#print(alt_a)
+#print(a)                   #-> Array'i komple degistirdi. Bunu onlemek icin .copy() metotu:
+
+#b = np.arange(1,26).reshape(5,5)
+#alt_b = b[0:3, 0:2].copy()  #-> Yapilan alt_kume degisikligini Ana Arraydan bagimsiz gerceklestirecek.
+#alt_b[0,0] = 999
+#print(alt_b)
+#print(b)                    #-> Ana Array .copy() metotunu kullandigimiz icin degismedi.
+
+
+
+    # Fancy Index ile Elemanlara erismek(!)
+import numpy as np
+#v = np.arange(0,31,3)
+#print(v[5])                 #-> Az elemanda bu yontemi kullanabiliriz.
+                             #-> Cok fazla deger oldugunda kullanacagimiz metot: Fancy index
+#al_getir = [1,3,5]
+#print(v[al_getir])
+
+
+    # 2D Fancy Index
+#m = np.arange(9).reshape(3,3)
+#print(m)
+#satir = np.array([0,1])     #-> 0.Satirin, 1.Sutunu
+#sutun = np.array([1,2])     #-> 1.Satirin, 2.Sutunu
+#print(m[satir, sutun])      #-> [1 5]
+
+
+    # Basit Index + Fancy Index
+#print(m[0, [1,2]])
+
+    # Slice + Fancy
+#print(m[0:, [1,2]])
+
+
+    # Kosullu Eleman Islemleri
+#v = np.array([1,2,3,4,5])
+#print(v > 5)        #-> Her eleman icin Sorgu islemi yapacaktir. Output: [False False False False False]
+#print(v > 3)        #-> Output: [False False False  True  True]
+#print(v[v > 2])     #-> v array'inin 2'den buyuk olan elemanlarini getir. [3 4 5]
+#print(v[v != 3])    #-> 3 disindaki elemanlari cagir. [1 2 4 5]
+#print(v*2)          #-> [ 2  4  6  8 10]
+#print(v**2)         #-> [ 1  4  9 16 25]
+
+
+    # Matematiksel Islemler
+#v = np.array([1,2,3,4,5])
+#print(v-1)
+#print(v*5/10 - 1)
+
+# >> ufunc <<
+#print(np.subtract(v,1))     # -  islemi
+#print(np.add(v,1))          # +  islemi
+#print(np.multiply(v,4))     # *  islemi
+#print(np.divide(v,3))       # /  islemi
+#print(np.power(v,3))        # ** islemi
+
+#print(np.mod(v,2))                  # % (bolumunden kalan) islemi
+#print(np.absolute(np.array([-3])))  # Mutlak Deger alma islemi
+
+#print(np.sin(360))          # sin alma islemi
+#print(np.cos(360))          # cos alma islemi
+
+#x = np.array([1,2,10])
+#print(np.log(x))            # log alma islemi
+#print(np.log10(x))
+
+
+
+        # Cheat Sheet
+        # "istedigimiz icerik" + "cheat sheet"
+        # ornek: "numpy mathematics cheat sheet"
+
+
+
+    # NumPy ile 2 Bilinmeyenli Denklem Cozum
+"""
+    5x + y = 12
+    x + 3y = 8
+    ___________
+    -14x = -28
+    x = 2
+    y = 2
+"""
+
+#a = np.array([[5,1], [1,3]])    #-> (1.denklemde) 5 = 1.Bilinmeyen Katsayisi, 1 = 2.Bilinmeyen Katsayisi
+                                 #-> (2.denklemde) 1 = 1.Bilinmeyen Katsayisi, 3 = 2.Bilinmeyen Katsayisi
+
+#b = np.array([12, 8])           #-> (1.denklemde) Sonuc = 12
+                                 #-> (2.denklemde) Sonuc = 8
+#x = np.linalg.solve(a, b)
+#print(x)
+
+
+
+"""
+        VERI MANIPULASYONU (NumPy & Pandas)
+"""
+
+#Pandas: Verileri düzenleme, analize etme ve işleme
