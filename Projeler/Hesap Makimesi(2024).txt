@@ -1,0 +1,24 @@
+list = ["*", "/", "+", "-"]
+print("Toplama (+), Cikarma (-), Çarpma (*), Bölme (/)")
+operasyon = input("İşlemi seçin: ")
+
+if operasyon in list:
+    sayi1 = float(input("İşlem yapmak istediğiniz ilk sayi: "))
+    sayi2 = float(input("İşlem yapmak istediğiniz diğer sayi: "))
+
+    if operasyon == "+":
+        print(sayi1 + sayi2)
+
+    if operasyon == "-":
+        print(sayi1 - sayi2)
+
+    if operasyon == "*":
+        print(sayi1 * sayi2)
+
+    if operasyon == "/":
+            if sayi2 == 0:
+                print("Gecersiz islem.\n")
+            else: print(sayi1 / sayi2)
+
+else:
+    print("Geçerli bir islem girmediginiz için program sonlandiriliyor.\n")
