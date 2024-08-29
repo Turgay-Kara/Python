@@ -123,6 +123,7 @@
 #print(np.random.randint(10, size = (5,3,2)))    #-> 5 blok, 3 satir, 2 sutun
 
 
+
 # >> randint ile olusturulmus bir Zar ornegi: <<
 """
 atis = 0
@@ -286,7 +287,7 @@ print("Tura Gelme Ihtimali: %{:.1f} olarak belirlendi.\n".format(ortalama_tura))
 
 
     # Fancy Index ile Elemanlara erismek(!)
-import numpy as np
+#import numpy as np
 #v = np.arange(0,31,3)
 #print(v[5])                 #-> Az elemanda bu yontemi kullanabiliriz.
                              #-> Cok fazla deger oldugunda kullanacagimiz metot: Fancy index
@@ -369,8 +370,222 @@ import numpy as np
 
 
 
+    # Practice:
+#m = np.arange(16).reshape(4, 4)
+#print(m)
+
+# soru 1 >> m matrisinin 0. satirindaki tüm sütunlari seçin. 
+#print(m[0, 0:4])
+
+
+# soru 2 >> m matrisinin 2. satirindaki 1. ve 3. sütunlardan elemanlari seçin. 
+#print(m[2, [1,3]])
+
+
+# soru 3 >> m matrisinin 1. ve 3. satirlarindan, 2. sütunlarindaki elemanlari seçin.
+#print(m[[1,3], 2])
+
+
+# soru 4 >> m matrisinin 1. ve 2. satirlarindan, 0. ile 3. sütunlar arasindaki elemanlari seçin.
+#print(m[1:3, 1:3])
+
+
+# soru 5 >> m matrisinin 0. ve 2. satirlarindan, 1. ve 2. sütunlarindaki elemanlari seçin.
+#print(m[[0,2], 1:3])
+
+
+
 """
         VERI MANIPULASYONU (NumPy & Pandas)
 """
 
 #Pandas: Verileri düzenleme, analize etme ve işleme
+
+#import pandas as pd
+
+#seri = pd.Series([11,22,33,44,55,66])
+#print(seri)
+#print(type(seri))     #-> Seri tipi >> <class 'pandas.core.series.Series'>  
+#print(seri.axes)      #-> Seri'nin indexlerine erisim. >> [RangeIndex(start=0, stop=6, step=1)]
+#print(seri.dtype)     #-> >> int64
+#print(seri.size)      #-> Seri eleman sayisi >> 6
+#print(seri.ndim)      #-> Kaç Boyutlu >> 1D
+#print(seri.values)    #-> >> [11 22 33 44 55 66]
+
+#print(seri.head(3))   #-> Seri'nin ilk 3 indexini getirecek.
+#print(seri.tail(3))   #-> Seri'nin son 3 indexini getirecek.
+
+
+
+    # Index isimlendirme
+#a = pd.Series([10,20,30,40,50], index = [1,3,5,7,9])
+#print(a)
+
+#b = pd.Series([10,20,30,40,50], index = ["a","b","c","d","e"])
+#print(b)
+#print(b["a"])        #-> a'nin karsilik geldigi degere eristik.
+
+#print(b["a":"d"])    #-> slice islemi ile a'dan d'ye kadar eristik.
+
+
+
+    # Sozluk uzerinden Seri olusturma
+#sozluk = {"reg": 10, "log": 11, "cart": 12, "passwd":1234}
+#seri = pd.Series(sozluk)
+#print(seri)
+
+#print(seri["reg":"cart"])   #-> Slicing islemi
+
+
+
+    # 2 Seriyi Birlestirerek Seri olusturma
+"""    
+sozluk = {"reg": 10, 
+          "log": 80, 
+          "cart": 12, 
+          "passwd":1234}
+
+sozluk2 = {"name": "Duru", 
+           "age": 18, 
+           "salary": 75000, 
+           "langs": ["Python", "R"]}
+
+seri = pd.Series(sozluk)
+seri2 = pd.Series(sozluk2)
+print(pd.concat([seri,seri2], axis=1))
+"""
+
+
+
+    # Eleman islemleri
+#import numpy as np
+#import pandas as pd
+
+#a = np.array([11,22,33,44,55])
+#seri = pd.Series(a)
+#print(seri)
+
+#print(seri[0])
+#print(seri[0:3])    #-> 0'dan 2.indexe kadar
+
+#seri = pd.Series([120, 240, 360, 480], index=["reg","log","cart","rf"])
+#print(seri)
+#print(seri.values)  # >> [120 240 360 480]
+#print(seri.keys)    # >>
+#print(seri.index)   # >> Index(['reg', 'log', 'cart', 'rf'], dtype='object')
+#print(seri.items())
+# >>
+#for index, value in seri.items():
+    #print("Index: {}, Value: {}".format(index, value))
+
+
+
+    # Eleman Sorgulama
+#print("reg" in seri)        # >> True
+#print("a" in seri)          # >> False
+#print(seri["reg"])          # >> 120
+#print(seri[["reg", "log"]])
+
+#seri["reg"] = 150           #-> "reg" Key'inin Value'sunu 150 olarak degistirdik. 
+#print(seri["reg"])
+#print(seri["reg":"cart"])
+
+
+
+    # DataFrame
+#import pandas as pd
+#l = [1,20,300,4000]
+#df = pd.DataFrame(l, columns= ["degisken_ismi"])
+#print(df)
+
+
+#import numpy as np
+#m = np.arange(1,10).reshape(3,3)
+#df = pd.DataFrame(m, columns= ["var1", "var2", "var3"])
+#print(df)
+
+
+
+    # DF Ornek:
+"""
+import pandas as pd
+data = {
+    "names": ["Turgay", "Emir", "Beyza"],
+    "langs": ["Python", ["Html CSS"], "R"],
+    "salary": [120000, 750000, 85000]
+    }
+df = pd.DataFrame(data)
+print(df)
+"""
+
+
+
+    # DF isimlendirme
+#m = np.arange(1,10).reshape(3,3)
+#df = pd.DataFrame(m, columns= ["var1", "var2", "var3"])
+#print(df.columns)           #-> Degisken isimlerini getirir >> Index(['var1', 'var2', 'var3'], dtype='object')
+
+#df.columns = ["deg1", "deg2", "deg3"]   #-> Degisken isim degistirme:
+#print(df)
+#print(df.axes)          #-> Satir ve Sutun bilgilerini verir.
+#print(df.shape)         #-> Boyut Bilgisi   >> (3, 3)
+#print(df.ndim)          # >> 2D
+#print(df.size)          # >> 9
+
+#print(df.values)        #-> DataFrame'den Verileri cekip Elemanlari bir Array'e donusturecek.
+#print(type(df.values))  #-> >> <class 'numpy.ndarray'>
+
+#print(df.head(2))        #-> Bastan 2 satiri getirir.
+#print(df.tail(2))        #-> Sondan 2 satiri getirir.
+
+
+#a = np.array([1,2,3,4,5])
+#df = pd.DataFrame(a, columns = ["deg1"])
+#print(df)
+
+
+"""
+import numpy as np
+import pandas as pd
+
+s1 = np.random.randint(10, size = 5)
+s2 = np.random.randint(10, size = 5)
+s3 = np.random.randint(10, size = 5)
+
+sozluk = {
+    "var1": s1,
+    "var2": s2,
+    "var3": s3
+}
+df = pd.DataFrame(sozluk)
+df.index = ["a","b","c", "d","e"]       #-> index isimlendirme islemi
+print(df)
+"""
+#df2 = df.drop("a", axis = 0)            #-> a satirini sil.
+#print(df2)
+
+#df.drop("a", axis = 0, inplace = True)  #-> a satirini sil. (ayni islem farkli metot)
+#print(df)
+
+#df.drop(["a", "b"], axis = 0, inplace = True)   #-> a ve b satirini sil
+#print(df)
+
+
+
+    # Sorgulama Islemi
+#print("var1" in df)        #-> var1 df icerisinde yer aliyor mu?   >> True
+#l = ["var1", "var4", "var2"]
+#for i in l:
+    #print(i in df)         #-> l'nin icerisindeki elemanlar df'in icerisinde mi kontrol et.
+
+
+
+#df["var4"] = df["var1"] * df["var2"]         #-> "var4" Yeni sutun ekledik.
+
+#print(df.drop("var4", axis = 1))             #-> "var4" gecici olarak silindi.
+
+#df.drop("var4", axis = 1, inplace = True)    #-> "var4" kalici olarak silindi.
+#print(df)
+
+#l = ["var1", "var2"]
+#print(df.drop(l, axis = 1))              #-> l listinin icindeki degiskenler silindi.
